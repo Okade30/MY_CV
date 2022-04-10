@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hubballi', cursive;
+}
+
+
+
+header {
+    width: 100%;
+    height: 600px;
+}
+
+nav {
+    text-align: right;
+    padding: 30px;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+nav>a {
+    color: rgb(252, 250, 251);
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 50px;
+    font-weight: bold;
+}
+
+nav>a:hover {
+    text-decoration: underline;
+    color: #9d62eb;
+}
+
+
+
+
+.contenedor {
+    display: flex;
+    text-align: center;
+    /* justify-content: center;
+    align-items:space-between ; */
+    /* mucho mejor el wrap para encajar las cajas */
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 0.5rem;
+    width: 100%;
+    background-color: #000123;
+
+    /* overflow: hidden; */
+    /* background-image: url("/img/pez.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover; */
+
+    background: #000123;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00012370, #000123e8), url(./img/fondo4.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00012379, #022f4d67), url(./img/fondo4.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.absolute {
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+    color: rgb(253, 255, 255);
+}
+
+.info {
+    margin: 2rem;
+    font-size: 1rem;
+    line-height: 1cm;
+}
+
+video {
+    width: 100%;
+    height: 80%;
+    box-shadow: 0px 25px 25px #5506e794;
+}
+
+.foto {
+    width: 100%;
+}
+
+
+/* galeria */
+
+.contenedor-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.contenedor figure {
+    position: relative;
+    height: 270px;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px #5506e7ea;
+    cursor: pointer;
+}
+
+.contenedor figure img {
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+
+.contenedor figure .capa {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f63ff80;
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.contenedor figure:hover>.capa {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedor figure:hover>.capa h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.contenedor figure .capa h3 {
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 500ms ease-out;
+    margin-top: 30px;
+}
+
+.contenedor figure .capa p {
+    color: floralwhite;
+    font-size: 18px;
+    line-height: 1;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+
+
+
+.box {
+    flex: 1 300px;
+    margin: 0.5rem;
+    padding: 2rem;
+    font-size: 2rem;
+    color: #ffffff;
+    box-shadow: 0px 0px 25px #5506e7ea;
+
+}
+
+.title-portafolio {
+    font-size: 2rem;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex: 83rem;
+    margin: 2.5rem;
+    border-radius: 36px;
+    padding: 30px;
+}
+
+.box2 {
+    flex: 200px;
+    padding: 2rem;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+
+
+div {
+    flex: 1;
+    margin: 0.5rem;
+    padding: 2rem;
+}
+
+
+footer {
+    flex: 1 1300px;
+    background-color: #00012380;
+    color: aliceblue;
+    font-size: 2rem;
+}
+
+.creditos {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1rem;
+    background-color: #0001237c;
+}
+
+.social {
+    /*las imágenes usadas tienen width de 48px*/
+    width: 60px;
+    position: fixed;
+    top: 50px;
+    right: 0;
+
+}
+
+/* Extra centrado vertical*/
+
+.social {
+    /* border:1px solid #000; */
+    top: 50%;
+    /*para poner height 192 deberíamos haber indicado en el reset de estilos font-size:0;*/
+    margin-top: -100px;
+
+}
+
+#skill {
+    list-style: none;
+    font: 12px;
+    width: 296px;
+    margin: 50px auto 0;
+    position: relative;
+    line-height: 2em;
+    padding: 30px 0;
+}
+
+#skill li {
+    margin-bottom: 40px;
+    background: #fffcfc;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 15px 25px #6f06e7ea;
+}
+
+#skill li h3 {
+    position: relative;
+    top: -25px;
+    color: #f5f5fc;
+    font-size: 1.5rem;
+}
+
+#skill li h2 {
+    position: relative;
+    top: -30px;
+    color: #440e8a;
+}
+
+
+@media screen and (min-width:280px) and (max-width:1200px) {
+    header {
+        background-position: center;
+    }
+
+    .absolute {
+        width: 100%;
+    }
+
+    .contenedor-img {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .absolute {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    video {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+}
